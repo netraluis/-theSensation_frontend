@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+.textHide-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textHide-title{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.textHide-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    text-align: center;
+    max-width: 500px
+}
+
+.textHide-container-button{
+    display: flex;
+    justify-content: center;
+}
+.textHide-container-button button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}

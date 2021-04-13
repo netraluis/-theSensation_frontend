@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import "../../App.css";
+
+
+.DateRangePicker.DateRangePicker_1{
+    width: 60%;
+}
+div.DateRangePickerInput.DateRangePickerInput_1.DateRangePickerInput__withBorder.DateRangePickerInput__withBorder_2{
+    background-color: transparent;
+    display: flex;
+    border: none;
+    align-items: center;
+    /* border: 2px solid blue; */
+}
+div div.DateInput.DateInput_1{
+    display: flex;
+    min-width: 150px;
+    align-items: center;
+    width: 60%;
+    border: 2px solid var(--primary);
+    font-size: small;
+
+}
+
+input.DateInput_input.DateInput_input_1{
+    order: 2;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    padding: 1%;
+    font-family: 'Lobster', cursive;
+    font-size: small;
+}
+
+
+
+div.DateRangePickerInput_arrow.DateRangePickerInput_arrow_1{
+    /* display: none; */
+    /* border: 2px solid red; */
+    width: 3.33333334%;
+}
+
+.DateRangePickerInput_arrow_svg.DateRangePickerInput_arrow_svg_1{
+    display: none;
+}
+
+input.DateInput_input.DateInput_input_1.DateInput_input__focused.DateInput_input__focused_2{
+    border: none;
+    box-shadow: none;
+   
+   
+}
+
+/*   */
+
+div div.DateInput.DateInput_1 span {
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    border-right: 2px solid var(--primary);
+    margin-left: 2px;
+}
+
+/* padre de todos */
+
+.booking{
+    position: relative;
+    z-index: 20;
+    display: flex;
+    padding: 2%;
+    background-color: var(--third);
+}
+
+/*Boton*/
+.booking button{
+    padding: 0;
+    margin: 0;
+    line-height: unset;
+    height: unset;
+    width: 38%;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+}
+
+@media( max-width: 680px){
+    .booking{
+        flex-direction: column;
+    }
+    .DateRangePicker.DateRangePicker_1{
+        width: 100%;
+    }
+    .booking button{
+        width: 100%;
+        margin: 0;
+        margin-top: 1%;
+        padding: 1%;
+    }
+}
+

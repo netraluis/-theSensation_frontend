@@ -1,0 +1,22 @@
+
+
+.slider-container {
+    position: relative;
+    text-align: center;
+    color: var(--primary)
+}
+.slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Fascinate', cursive;
+    font-size: 3rem;
+}.awssld__bullets{
+    bottom: 10px;
+    z-index: 10;
+}
+
+
+
+

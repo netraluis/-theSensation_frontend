@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Switch, Route, Redirect } from "react-router-dom";
+
+import CardFormElement from './components/stripe/card-form-element';
+import Header from './components/header/header'
+import Button from './components/button/button'
+import Booking from './components/booking/booking'
+import Slider from './components/slider/slider'
+import TextHide from './components/textHide/textHide'
+import Footer from './components/footer/footer'
+
+import Homepage from './pages/homepage/homepage'
+import Roompage from './pages/roompage/roompage'
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+    <Header/>
+    <Booking/>
+    {/*<Slider array={array}/>
+    <TextHide title = 'titulo' first='primero' second='segundo'/>*/}
+    <Switch>
+      <Route exact path="/" component={Homepage} />
+      <Route path="/room" component={Roompage}/>
+      {/*<Route path="/shop" component={ShopPage} />
+      <Route exact path="/checkout" component={CheckoutPage} />*/}
+    </Switch>
+    <Footer/>
+    {/*{/*<CardFormElement/>*/}
+  </>
+  
   );
 }
 
