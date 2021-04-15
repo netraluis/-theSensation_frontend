@@ -1,0 +1,13 @@
+.sliderLeft-container{
+    display: flex;
+    border: 2px solid red;
+}
+
+.sliderLeft-image{
+    width: 50%;
+}
+
+.sliderLeft .awssld{
+    --slider-height-percentage: 30%;
+    --content-background-color: unset
+}

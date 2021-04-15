@@ -12,11 +12,29 @@
     transform: translate(-50%, -50%);
     font-family: 'Fascinate', cursive;
     font-size: 3rem;
-}.awssld__bullets{
+}
+.awssld__bullets{
     bottom: 10px;
     z-index: 10;
 }
 
 
 
+.slider-img{
+    max-width: 100%;
+    min-width: 60%;
+    /* height: '100%' */
+}
 
+.prueba{
+    /* width: 50%; */
+    /* height: 50px; */
+    border:2px solid red
+}
+.prueba .awssld.awssld--organic-arrows{
+    /* width: 50%; */
+}
+
+.slider-image-left{
+
+}

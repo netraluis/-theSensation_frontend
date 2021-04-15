@@ -9,13 +9,11 @@ const homePage = (props) => {
             url:'3Q0B6818.JPG',
             alt:'',
             text: 'The Relax Sensation',
-            button: false
         },
         {
             url:'3Q0B6826.JPG',
             alt:'',
             text: 'The feeling Sensation',
-            button: false
         }
     ]
 
@@ -56,7 +54,7 @@ const homePage = (props) => {
     console.log(props)
     return (
         <>
-            <Slider array={SliderImages}/>
+            <Slider array={SliderImages} />
             <TextHide title={textHideHotel.title} first={textHideHotel.first} second={textHideHotel.second}/>
             <TextHide title={textHideService.title} first={textHideService.first} second={textHideService.second}/>
             <ImageButton array={imageTextFile1} />

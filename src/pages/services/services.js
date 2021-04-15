@@ -1,17 +1,27 @@
-import Slider from '../../components/slider/slider'
+import SliderImageLeft from '../../components/sliderImageLeft/sliderImageLeft'
 import TextHide from '../../components/textHide/textHide'
 
-const RoomPage = () => {
+const servicesPage = () => {
     
-    const SliderImages = 
+    const TitleTrat = 'titulo'
+    const SliderImagesTrat = 
     [
         {
+            name:'nombre',
             url:'3Q0B6818.JPG',
             alt:'',
+            title: 'Título',
+            subtitle: 'subtitle',
+            text: 'The feeling Sensation',
+            price:'24€'
         },
         {
             url:'3Q0B6826.JPG',
             alt:'',
+            title: 'Título',
+            subtitle: 'subtitle',
+            text: 'The feeling Sensation',
+            price:'20€'
         }
     ]
 
@@ -25,10 +35,10 @@ const RoomPage = () => {
 
     return (
         <>
-            <Slider array={SliderImages}/>
             <TextHide title={textHideLocalization.title} first={textHideLocalization.first} second={textHideLocalization.second}/>
+            <SliderImageLeft array={SliderImagesTrat} title={TitleTrat}/>
         </>
         )
 }
 
-export default RoomPage
+export default servicesPage
