@@ -15,7 +15,7 @@ const TextHide=(props) =>{
         <div className='textHide-text'>
             <p>{first}</p>
             <div style={{display: `${show ? '': 'none'}`}} >
-            {second.map(text=><p>{text}</p>)}
+            {second.map(text=><p key = {text}>{text}</p>)}
             </div>
             
         </div>

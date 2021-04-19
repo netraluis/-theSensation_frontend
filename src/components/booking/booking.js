@@ -9,11 +9,11 @@ import { DateRangePicker } from "react-dates";
 import Button from '../button/button'
 
 class Booking extends Component {
-    BLOCKED_DATES = [
-      moment().add(10, "days"),
-      moment().add(11, "days"),
-      moment().add(12, "days")
-    ];
+    // BLOCKED_DATES = [
+    //   moment().add(10, "days"),
+    //   moment().add(11, "days"),
+    //   moment().add(12, "days")
+    // ];
   
     constructor() {
       super();
@@ -33,10 +33,6 @@ class Booking extends Component {
 
       this.handleDatesChange = this.handleDatesChange.bind(this);
       this.handleFocusChange = this.handleFocusChange.bind(this);
-    //   this.handleChangeFullscreen = this.handleChangeFullscreen.bind(this);
-    //   this.handleChangeDirection = this.handleChangeDirection.bind(this);
-    //   this.handleChangeDateFormat = this.handleChangeDateFormat.bind(this);
-    //   this.handleIsDayBlocked = this.handleIsDayBlocked.bind(this);
     }
   
     componentDidMount(){
@@ -76,6 +72,13 @@ class Booking extends Component {
     //   return this.BLOCKED_DATES.filter(d => d.isSame(day, "day")).length > 0;
     // }
   
+    onClick = () =>{
+      const startDate = this.state.startDate.format('YYYY-MM-DD')
+      const endDate = this.state.endDate.format('YYYY-MM-DD')
+      console.log('hola',startDate, endDate, this.props.history)
+      this.props.history.push(`/booking-room/${startDate}/${endDate}`)
+      
+    }
     render() {
       return (
         <div className="booking">
@@ -92,7 +95,7 @@ class Booking extends Component {
             numberOfMonths={1}
             minimumNights={1}
           />
-          <Button>RESERVAR</Button>
+          <Button onClick={this.onClick}>RESERVAR</Button>
           {/*<br />
           <br />
           <h4>Options</h4>

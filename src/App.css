@@ -4,3 +4,8 @@ html{
   --third: rgb(226, 226, 226);
   --fourth: rgb(1, 78, 1);
 }
+
+
+.app-switch-container{
+  min-height: 80vh;
+}

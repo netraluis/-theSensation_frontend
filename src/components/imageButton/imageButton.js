@@ -19,7 +19,7 @@ const ImageButton = ({
         >
           
           <img
-            clasName="imageStyle"
+            className="imageStyle"
             style={imageStyle}
             src={`${image.imageUrl}`}
             alt=""

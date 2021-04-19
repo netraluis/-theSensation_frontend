@@ -1,7 +1,8 @@
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
-import './sliderImageLeft.css'
-
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
+import "./sliderImageLeft.css";
+import Button from "../../components/button/button";
+import React, { useState } from "react";
 
 /*
 [{
@@ -11,35 +12,51 @@ import './sliderImageLeft.css'
   button
 }]
 */
-const SliderImageLeft = (props) =>{
-  const {array,title} = props
-  console.log(array.length>0)
+const SliderImageLeft = (props) => {
+  let host = `${window.location.protocol}//${window.location.host}/`;
+  const { array, title, button, hide } = props;
+  const [show, setShow] = useState(false);
+  // if(hide){
+  //   setShow(true)
+  // }
   return (
-      <div className='sliderLeft'>
-       <h3>{title}</h3>
-        <AwesomeSlider>
-            {array.map(imageObject=>(
-            <div className = 'sliderLeft-container'>
-            <div className = 'sliderLeft-image'>
-                <img style={image}  src={`static/images/${imageObject.url}`} alt=''/>
-            </div>
-                <div className = 'sliderLeft-text'>
-                <h3>
-                {imageObject.subtitle}
-                </h3>
-                <p>{imageObject.text}</p>
-                <button>{imageObject.price}</button>
+    <div className="sliderLeft-outside">
+      <div className="sliderLeft">
+        <h3>
+          {hide && !show && [<div onClick={() => setShow(!show)}>&#9658;</div>]}
+          {hide && show && [<div onClick={() => setShow(!show)}>&#9660;</div>]}
+          {title}
+        </h3>
+        {(!hide || show) && [
+          <AwesomeSlider>
+            {array.map((imageObject) => (
+              <div key={imageObject.url} className="sliderLeft-container">
+                <div className="sliderLeft-image">
+                  <img
+                    style={image}
+                    src={`${host}static/images/${imageObject.url}`}
+                    alt={imageObject.alt}
+                  />
                 </div>
-            </div>
+                <div key={imageObject.alt} className="sliderLeft-text">
+                  <h3>{imageObject.subtitle}</h3>
+                  <p>{imageObject.text}</p>
+                  <div>
+                    <div>{imageObject.price}</div>
+                    {button && [<Button>RESERVAR</Button>]}
+                  </div>
+                </div>
+              </div>
             ))}
-        </AwesomeSlider>
+          </AwesomeSlider>,
+        ]}
       </div>
+    </div>
   );
-} 
+};
 
-export default SliderImageLeft
+export default SliderImageLeft;
 
 const image = {
-  width: '100%',
-
-}
+  width: "100%",
+};
