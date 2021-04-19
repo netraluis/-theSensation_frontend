@@ -29,8 +29,8 @@ const SliderImageLeft = (props) => {
         </h3>
         {(!hide || show) && [
           <AwesomeSlider>
-            {array.map((imageObject) => (
-              <div key={imageObject.url} className="sliderLeft-container">
+            {array.map((imageObject, index) => (
+              <div key={index} className="sliderLeft-container">
                 <div className="sliderLeft-image">
                   <img
                     style={image}
