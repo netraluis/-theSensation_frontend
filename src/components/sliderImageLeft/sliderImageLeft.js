@@ -14,11 +14,15 @@ import React, { useState } from "react";
 */
 const SliderImageLeft = (props) => {
   let host = `${window.location.protocol}//${window.location.host}/`;
-  const { array, title, button, hide } = props;
+  const { array, title, button, hide, addExtra } = props;
   const [show, setShow] = useState(false);
   // if(hide){
   //   setShow(true)
   // }
+  const click = (name, price) => {
+    console.log({name, price})
+    addExtra(name, price)
+  }
   return (
     <div className="sliderLeft-outside">
       <div className="sliderLeft">
@@ -43,7 +47,7 @@ const SliderImageLeft = (props) => {
                   <p>{imageObject.text}</p>
                   <div>
                     <div>{imageObject.price}</div>
-                    {button && [<Button>RESERVAR</Button>]}
+                    {button && [<Button onClick={()=>{click(imageObject.subtitle, imageObject.price)}} >RESERVAR</Button>]}
                   </div>
                 </div>
               </div>

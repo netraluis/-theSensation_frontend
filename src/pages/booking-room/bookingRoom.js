@@ -87,8 +87,8 @@ const sliderImagesRoom14 =
 
 
 const BookingRoom = (props) => {
-    console.log('params',props)
     const {startDate, endDate} = useParams();
+    let end = 
     console.log( startDate, endDate )
     const {history} = props
     

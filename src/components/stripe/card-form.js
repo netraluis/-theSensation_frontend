@@ -2,6 +2,8 @@ import React, { useMemo } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 
 import useResponsiveFontSize from "../../utils/use-responsive-font-size";
+import './card-form.css'
+import Button from '../button/button'
 
 const useOptions = () => {
   const fontSize = useResponsiveFontSize();
@@ -14,13 +16,13 @@ const useOptions = () => {
           letterSpacing: "0.025em",
           fontFamily: "Source Code Pro, monospace",
           "::placeholder": {
-            color: "#aab7c4"
-          }
+            color: "#aab7c4",
+          },
         },
         invalid: {
-          color: "#9e2146"
-        }
-      }
+          color: "#9e2146",
+        },
+      },
     }),
     [fontSize]
   );
@@ -48,50 +50,54 @@ const CardForm = () => {
       card: elements.getElement(CardElement),
       billing_details: {
         name: event.target.name.value,
-        email: event.target.email.value, 
-      }
+        email: event.target.email.value,
+      },
     });
 
     console.log("[PaymentMethod]", payload);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name
-        <input name="name" type="text" placeholder="Jane Doe" required />
-      </label>
-      <label>
-        Email
-        <input
-          name="email"
-          type="email"
-          placeholder="jane.doe@example.com"
-          required
-        />
-      </label>
-      <label>
-        Card details
-        <CardElement
-          options={options}
-          onReady={() => {
-            console.log("CardElement [ready]");
-          }}
-          onChange={(event) => {
-            console.log("CardElement [change]", event);
-          }}
-          onBlur={() => {
-            console.log("CardElement [blur]");
-          }}
-          onFocus={() => {
-            console.log("CardElement [focus]");
-          }}
-        />
-      </label>
-      <button type="submit" disabled={!stripe}>
-        Pay
-      </button>
-    </form>
+    <div className='card-form-outside'>
+      <form onSubmit={handleSubmit} className='card-form-container'>
+        <div className='card-form-personal-data'>
+          <input name="name" type="text" placeholder="Nombre" required />
+
+          <input name="lastName" type="text" placeholder="Apellido" required />
+        </div>
+
+        <div className='card-form-email'>
+          <input
+            style={{widht:'400px'}}
+            name="email"
+            type="email"
+            placeholder="jane.doe@example.com"
+            required
+          />
+        </div>
+
+        <div className='card-form-card'>
+          <CardElement
+            style={{widht:'100%'}}
+            options={options}
+            onReady={() => {
+              console.log("CardElement [ready]");
+            }}
+            onChange={(event) => {
+              console.log("CardElement [change]", event);
+            }}
+            onBlur={() => {
+              console.log("CardElement [blur]");
+            }}
+            onFocus={() => {
+              console.log("CardElement [focus]");
+            }}
+          />
+        </div>
+
+        <Button type="submit" disabled={!stripe}>PAGAR</Button>
+      </form>
+    </div>
   );
 };
 

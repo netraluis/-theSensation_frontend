@@ -1,0 +1,38 @@
+.card-form-outside{
+    display: flex;
+    justify-content: center;
+}
+.card-form-container{
+  
+    width: 800px;
+    justify-content: center;
+    /* display: flex; */
+}
+
+.card-form-personal-data{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-form-email{
+    
+    /* display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /*justify-content: space-evenly;
+    min-width: 375px; */
+    display: flex;
+}
+
+.card-form-card{
+    
+    text-align: center;
+    margin: auto;
+    /* min-width: 500px; */
+}
+
+.card-form-outside input {
+
+    width: 100%;
+    max-width: unset;
+}
