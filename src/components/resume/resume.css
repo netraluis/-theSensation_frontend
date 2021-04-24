@@ -1,0 +1,19 @@
+/* .resume-container{
+    border:2px solid red;
+} */
+.resume-extras-container{
+    display: flex;
+    justify-content: center;
+}
+.resume-extras{
+    border: 2px solid black;
+    /* width: 500px; */
+    padding: 2vh;
+    border-radius: 3px;
+    margin-bottom: 40px;
+    
+}
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}

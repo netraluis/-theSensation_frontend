@@ -93,7 +93,6 @@ const BookingRoom = (props) => {
     const {history} = props
     
     useEffect(() => {
-        console.log(process.env.REACT_APP_API_URL)
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -105,7 +104,6 @@ const BookingRoom = (props) => {
         fetch(`${process.env.REACT_APP_API_URL}/api/v1/bookings/aviability`, requestOptions)
             .then(response => response.json())
             .then(data => {
-                console.log({data: data.data.response['1'] })
                 setRoom11Show(data.data.response['11'])
                 setRoom12Show(data.data.response['12'])
                 setRoom13Show(data.data.response['13'])

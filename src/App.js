@@ -15,6 +15,7 @@ import Services from './pages/services/services'
 import BookingRoom from './pages/booking-room/bookingRoom'
 import BookingExtras from './pages/booking-extras/bookingExtras'
 import Location from './pages/location/location'
+import Stuff from './pages/stuff/stuff' 
 
 function App() {
   
@@ -32,6 +33,7 @@ function App() {
       <Route path="/booking-room/:startDate/:endDate" component={BookingRoom}/>
       <Route path="/booking-extras/:startDate/:endDate/:room" component={BookingExtras} />
       <Route path="/location" component={Location} />
+      <Route path="/stuff" component={Stuff}/>
       {/*<Route path="/shop" component={Shoppage} />
       <Route exact path="/checkout" component={CheckoutPage} />*/}
     </Switch>

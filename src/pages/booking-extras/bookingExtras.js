@@ -50,14 +50,14 @@ const SliderImagesCult =
     {
         url:'tour_turistico.jpg',
         alt:'foto persona mirando mapa',
-        subtitle: 'Tour Turístico',
+        subtitle: 'Tour turístico',
         text: 'Tour turístico de Barcelona, caminando por paseo de gracia, siguiendo por el Barrio gótico hasta llegar al mar sin olvidarnos de la Sagrada familia',
         price:'20€'
     },
     {
         url:'persona_piernas_corriendo.jpg',
         alt:'foto masaje cervicales',
-        subtitle: 'Tour Turístico corriendo',
+        subtitle: 'Tour turístico corriendo',
         text: 'Combinar deporte con cúltura nunca ha sido tan fácil con nuestro tour corriendo por las calles más famosas de Barcelona',
         price:'20€'
     },
@@ -118,7 +118,7 @@ const SliderImagesRo =
     {
         url:'atardecer.jpg',
         alt:'foto atardecer',
-        subtitle: 'Cena montaña atardecer',
+        subtitle: 'Cena en la montaña al atardecer',
         text: 'Cena al ruido de la naturaleza con la luz de un atardecer mediterráneo',
         price:'40€'
     },
@@ -146,7 +146,7 @@ const BookingExtras = () =>{
         <SliderImageLeft array={SliderImagesCult} title={TitleCult} button hide addExtra={addExtra}/>
         <SliderImageLeft array={SliderImagesAv} title={TitleAv} button hide addExtra={addExtra}/>
         <SliderImageLeft array={SliderImagesRo} title={TitleRo} button hide addExtra={addExtra}/>
-        <Resume extras={extras}/>
+        <Resume extras={extras} setExtras={setExtras}/>
     </>
 )}
 

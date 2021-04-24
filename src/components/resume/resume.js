@@ -15,6 +15,15 @@ const Resume = (props) => {
   console.log( startDate, endDate, room )
   const {history} = props
 
+  const deleteItem = (index) => {
+    console.log('deleteItem', index)
+    console.log(props.extras)
+    const newArray = [...props.extras]
+    newArray.splice(index,1)
+    props.setExtras(newArray)
+    
+  }
+
   console.log(props.extras, startDate, endDate)
   return (
     <div className="sliderLeft-outside">
@@ -25,17 +34,21 @@ const Resume = (props) => {
           Finalizar Reserva
         </h3>
         {show && [
-          <div>
-            <div>
+          <div className = 'resume-container'>
+          <div className = 'resume-extras-container'>
+            <div className = 'resume-extras'>
+            <h3>Resumen sobre tu reserva</h3>
               Estancia de {days} dias en la habitación {room}
               <div style={{display: props.extras !== 0 ? '':'none'}}>
-                {props.extras.map(el=>{
-                  console.log(el)
-                  return <div> Un {el.name} a {el.value}</div>
-                })}
+                <ul>
+                  {props.extras.map((el,index)=>{
+                    return <li> Un {el.name} a {el.value} <span onClick={()=>deleteItem(index)}>&#9746;</span></li>
+                  })}
+                </ul>
               </div>
             </div>
-            <Stripe/>
+          </div>
+            <Stripe extras={props.extras}/>
           </div>
         ]}
       </div>

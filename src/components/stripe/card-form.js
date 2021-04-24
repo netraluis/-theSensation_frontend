@@ -4,6 +4,7 @@ import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import useResponsiveFontSize from "../../utils/use-responsive-font-size";
 import './card-form.css'
 import Button from '../button/button'
+import { useParams } from "react-router";
 
 const useOptions = () => {
   const fontSize = useResponsiveFontSize();
@@ -30,10 +31,11 @@ const useOptions = () => {
   return options;
 };
 
-const CardForm = () => {
+const CardForm = (props) => {
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
+  const {startDate, endDate, room} = useParams();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -45,19 +47,39 @@ const CardForm = () => {
       return;
     }
 
-    const payload = await stripe.createPaymentMethod({
+    stripe.createPaymentMethod({
       type: "card",
       card: elements.getElement(CardElement),
       billing_details: {
         name: event.target.name.value,
         email: event.target.email.value,
       },
-    });
+    }).then(res=>{
+      console.log('res', res.paymentMethod.id)
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          paymentMethodId:res.paymentMethod.id,
+          startDate,
+          endDate,
+          room,
+          extras: props.extras,
+          email:event.target.email.value
+        })
+      };
+      fetch(`${process.env.REACT_APP_API_URL}/api/v1/bookings/`, requestOptions)
+          .then(response => response.json())
+          .then(response=>console.log(response))
+    })
 
-    console.log("[PaymentMethod]", payload);
+
+    // console.log("[PaymentMethod]", payload);
+    console.log('extras', props.extras)
   };
 
   return (
+    <>
     <div className='card-form-outside'>
       <form onSubmit={handleSubmit} className='card-form-container'>
         <div className='card-form-personal-data'>
@@ -78,26 +100,14 @@ const CardForm = () => {
 
         <div className='card-form-card'>
           <CardElement
-            style={{widht:'100%'}}
             options={options}
-            onReady={() => {
-              console.log("CardElement [ready]");
-            }}
-            onChange={(event) => {
-              console.log("CardElement [change]", event);
-            }}
-            onBlur={() => {
-              console.log("CardElement [blur]");
-            }}
-            onFocus={() => {
-              console.log("CardElement [focus]");
-            }}
           />
         </div>
-
         <Button type="submit" disabled={!stripe}>PAGAR</Button>
       </form>
-    </div>
+      </div>
+      <div><h3>Su reserva se ha realizado correctamente, ya le estamos esperando</h3></div>
+      </>
   );
 };
 
