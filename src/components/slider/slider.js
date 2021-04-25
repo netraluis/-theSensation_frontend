@@ -17,7 +17,7 @@ const slider = (props) =>{
     <AwesomeSlider>
       {array.map(imageObject=>(
         <div key={imageObject.text} className = 'slider-container'>
-          <img clasName = 'slider-cover img' style={image}  src={`static/images/${imageObject.url}`} alt=''/>
+          <img className = 'slider-cover img' style={image}  src={`static/images/${imageObject.url}`} alt=''/>
           <div className = 'slider-text'>{imageObject.text}</div>
         </div>
       ))}
