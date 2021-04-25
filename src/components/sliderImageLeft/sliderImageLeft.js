@@ -4,14 +4,6 @@ import "./sliderImageLeft.css";
 import Button from "../../components/button/button";
 import React, { useState } from "react";
 
-/*
-[{
-  url,
-  alt,
-  text,
-  button
-}]
-*/
 const SliderImageLeft = (props) => {
   let host = `${window.location.protocol}//${window.location.host}/`;
   const { array, title, button, hide, addExtra } = props;
