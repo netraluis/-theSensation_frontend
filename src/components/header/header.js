@@ -26,11 +26,13 @@ const Header = () => {
                 </ul>
             </div>
             <div className='header-mobile'>
-                <h1 className ='header-title'>theSensation</h1>
+                <Link style={{color:'unset', textDecoration: 'unset'}} to='/'>
+                    <h1 className ='header-title'>theSensation</h1>
+                </Link>
                 <Menu width={'100%'} right>
-                    <div className="header-element" >Habitaciones</div>
-                    <div className="header-element" >Servicios</div>
-                    <div className="header-element" >Ubicación</div>
+                    <div className="header-element" ><Link style={{color:'unset', textDecoration: 'unset'}} to='/room'>Habitaciones</Link></div>
+                    <div className="header-element" ><Link style={{color:'unset', textDecoration: 'unset'}} to='/services'>Servicios</Link></div>
+                    <div className="header-element" ><Link style={{color:'unset', textDecoration: 'unset'}} to='/location'>Ubicación</Link></div>
                     <div className="header-element" >Contacto</div>
                 </Menu>
             </div>
