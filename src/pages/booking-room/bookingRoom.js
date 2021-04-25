@@ -116,19 +116,19 @@ const BookingRoom = (props) => {
     return (
         <>
             <div style={{display: `${room11Show?'':'none'}`}}>
-                <SmallSliderWithText array={sliderImagesRoom11} 
+                <SmallSliderWithText key={11} array={sliderImagesRoom11} 
                 title={room11} text={text11} price={price11} history={history} room='11' startDate={startDate} endDate={endDate} />
             </div>
             <div style={{display: `${room12Show?'':'none'}`}}>
-                <SmallSliderWithText array={sliderImagesRoom12} 
+                <SmallSliderWithText key={12} array={sliderImagesRoom12} 
                 title={room12} text={text12} price={price12} history={history} room='12' startDate={startDate} endDate={endDate} />
             </div>
             <div style={{display: `${room13Show?'':'none'}`}}>
-                <SmallSliderWithText array={sliderImagesRoom13} 
+                <SmallSliderWithText key={13} array={sliderImagesRoom13} 
                 title={room13} text={text13} price={price13} history={history} room='13' startDate={startDate} endDate={endDate} />
             </div>
             <div style={{display: `${room14Show?'':'none'}`}} >
-                <SmallSliderWithText array={sliderImagesRoom14} 
+                <SmallSliderWithText key={14} array={sliderImagesRoom14} 
                 title={room14} text={text14} price={price14} history={history} room='14' startDate={startDate} endDate={endDate} />
             </div>
         </>

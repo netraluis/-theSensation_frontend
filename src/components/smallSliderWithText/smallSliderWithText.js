@@ -28,6 +28,7 @@ const SliderImageLeftText = ({ array, title, text, price, room, history, startDa
           <AwesomeSlider>
             {array.map((imageObject) => (
               <div key={imageObject.url} className="sliderLeftText-image">
+              {console.log(`${host}static/images/${imageObject.url}`)}
                 <img
                   style={image}
                   src={`${host}static/images/${imageObject.url}`}
