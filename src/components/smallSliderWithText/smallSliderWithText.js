@@ -1,8 +1,8 @@
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import "./smallSliderWithText.css";
-import Button from '../../components/button/button'
-import React, { useState, useEffect } from 'react';
+import Button from "../../components/button/button";
+import React, { useState, useEffect } from "react";
 // '.'
 
 /*
@@ -13,14 +13,23 @@ import React, { useState, useEffect } from 'react';
   button
 }]
 */
-const SliderImageLeftText = ({ array, title, text, price, room, history, startDate, endDate }) => {
+const SliderImageLeftText = ({
+  array,
+  title,
+  text,
+  price,
+  room,
+  history,
+  startDate,
+  endDate,
+}) => {
   // const { array, title, text, price, room, history } = props;
   let host = `${window.location.protocol}//${window.location.host}/`;
 
   const onClick = () => {
-    history.push(`/booking-extras/${startDate}/${endDate}/${room}`)
-  }
-  
+    history.push(`/booking-extras/${startDate}/${endDate}/${room}`);
+  };
+
   return (
     <div className="sliderLeftText-outside">
       <div className="sliderLeftText">
@@ -28,7 +37,6 @@ const SliderImageLeftText = ({ array, title, text, price, room, history, startDa
           <AwesomeSlider>
             {array.map((imageObject) => (
               <div key={imageObject.url} className="sliderLeftText-image">
-              {console.log(`${host}static/images/${imageObject.url}`)}
                 <img
                   style={image}
                   src={`${host}static/images/${imageObject.url}`}
@@ -42,7 +50,8 @@ const SliderImageLeftText = ({ array, title, text, price, room, history, startDa
           <h3>{title}</h3>
           <p>{text}</p>
           <div>
-            <div>{price}</div><Button onClick={onClick}>RESERVAR</Button>
+            <div>{price}</div>
+            <Button onClick={onClick}>RESERVAR</Button>
           </div>
         </div>
       </div>

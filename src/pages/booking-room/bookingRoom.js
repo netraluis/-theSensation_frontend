@@ -18,15 +18,15 @@ const sliderImagesRoom11 =
 [
     // imagenes de freepik 
     {
-        url:'11_cama_2.jpg',
+        url:'11_cama_2.JPG',
         alt:'cama hab 11',
     },
     {
-        url:'11_cama.jpg',
+        url:'11_cama.JPG',
         alt:'cama hab 11',
     },
     {
-        url:'11_cama_lavabo.jpg',
+        url:'11_cama_lavabo.JPG',
         alt:'cama y lavabo hab 11',
     },
 ]
@@ -38,15 +38,15 @@ const sliderImagesRoom12 =
 [
     // imagenes de freepik 
     {
-        url:'12_cama_silla.jpg',
+        url:'12_cama_silla.JPG',
         alt:'cama y silla hab 12',
     },
     {
-        url:'12_cama.jpg',
+        url:'12_cama.JPG',
         alt:'cama hab 12',
     },
     {
-        url:'12_cama_lavabo.jpg',
+        url:'12_cama_lavabo.JPG',
         alt:'cama y lavabo hab 12',
     },
 ]
@@ -58,11 +58,11 @@ const sliderImagesRoom13 =
 [
     // imagenes de freepik ,
     {
-        url:'13_cama.jpg',
+        url:'13_cama.JPG',
         alt:'cama hab 13',
     },
     {
-        url:'13_lavabo.jpg',
+        url:'13_lavabo.JPG',
         alt:'lavabo hab 13',
     },
 ]
@@ -74,11 +74,11 @@ const sliderImagesRoom14 =
 [
     // imagenes de freepik ,
     {
-        url:'14_cama.jpg',
+        url:'14_cama.JPG',
         alt:'cama hab 14',
     },
     {
-        url:'14_lavabo.jpg',
+        url:'14_lavabo.JPG',
         alt:'lavabo hab 14',
     },
 ]
