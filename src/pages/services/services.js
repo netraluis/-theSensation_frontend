@@ -1,5 +1,6 @@
 import SliderImageLeft from '../../components/sliderImageLeft/sliderImageLeft'
 import TextHide from '../../components/textHide/textHide'
+import Booking from '../../components/booking/booking'
 
 const servicesPage = () => {
 
@@ -145,6 +146,7 @@ const servicesPage = () => {
 
     return (
         <>
+            <Booking/>
             <TextHide title={textHideLocalization.title} first={textHideLocalization.first} second={textHideLocalization.second}/>
             <SliderImageLeft array={SliderImagesTrat} title={TitleTrat}/>
             <SliderImageLeft array={SliderImagesCult} title={TitleCult}/>

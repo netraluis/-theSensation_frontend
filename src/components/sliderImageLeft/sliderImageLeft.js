@@ -16,11 +16,7 @@ const SliderImageLeft = (props) => {
   let host = `${window.location.protocol}//${window.location.host}/`;
   const { array, title, button, hide, addExtra } = props;
   const [show, setShow] = useState(false);
-  // if(hide){
-  //   setShow(true)
-  // }
   const click = (name, price) => {
-    console.log({name, price})
     addExtra(name, price)
   }
   return (
