@@ -10,8 +10,6 @@ const localizer = momentLocalizer(moment);
 const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
     const [bookingArray, setBookingArray] = useState([]);
     const [calendarDate, setCalendarDate] = useState(new Date());
-    // const [recharge, triggerRecharge] = useState(false);
-    // const [isLogIn, setIsLogIn] = useState(!(!localStorage.getItem("token")||localStorage.getItem("token")==='null'))
   useEffect(() => {
     const bookingFetch = [];
     const requestOptions = {
@@ -38,7 +36,6 @@ const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
               _id,
               pay,
             } = element;
-            console.log({ paymentMethodId, startDate, endDate, _id, pay });
             bookingFetch.push({
               title: `${room} con id ${_id}`,
               start: startDate,
@@ -51,14 +48,11 @@ const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
         });
         setBookingArray(bookingFetch);
         setIsLogIn(true)
-        // return triggerRecharge(!recharge);
         }
         if(data.status === 'error'){
             setIsLogIn(false)
             setIsAdmin(false)
             localStorage.setItem('admin', false);
-            localStorage.setItem('token', null);
-            // triggerRecharge(!recharge);
         }
       });
   }, [recharge]);

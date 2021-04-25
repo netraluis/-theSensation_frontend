@@ -1,9 +1,7 @@
-import SliderImageLeft from '../../components/sliderImageLeft/sliderImageLeft'
+
 import SmallSliderWithText from '../../components/smallSliderWithText/smallSliderWithText'
-import TextHide from '../../components/textHide/textHide'
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router";
-const dotenv = require('dotenv');
 
 // const textHideLocalization = {
 //     title: 'Servicios',
@@ -88,8 +86,6 @@ const sliderImagesRoom14 =
 
 const BookingRoom = (props) => {
     const {startDate, endDate} = useParams();
-    let end = 
-    console.log( startDate, endDate )
     const {history} = props
     
     useEffect(() => {

@@ -1,14 +1,7 @@
 import React from 'react';
-import { Switch, Route, Redirect, BrowserRouter } from "react-router-dom";
-
-import CardFormElement from './components/stripe/card-form-element';
+import { Switch, Route } from "react-router-dom";
 import Header from './components/header/header'
-import Button from './components/button/button'
-import Booking from './components/booking/booking'
-import Slider from './components/slider/slider'
-import TextHide from './components/textHide/textHide'
 import Footer from './components/footer/footer'
-
 import Homepage from './pages/homepage/homepage'
 import Roompage from './pages/roompage/roompage'
 import Services from './pages/services/services'
