@@ -55,7 +55,6 @@ const CardForm = (props) => {
         email: event.target.email.value,
       },
     }).then(res=>{
-      console.log('res', res.paymentMethod.id)
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

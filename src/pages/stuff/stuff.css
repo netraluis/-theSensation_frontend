@@ -1,0 +1,33 @@
+.stuff-header{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    /* width: 600px; */
+}
+.stuff-header li{
+    margin-left:20px;
+    cursor: pointer;
+}
+.stuff-center{
+    display: flex;
+    justify-content: center;
+}
+.stuff-signUp{
+    z-index: 20;
+    position: absolute;
+    top: 90px; right: 200px;
+    border: 2px solid black;
+    width: 300px;
+    padding-bottom:20px;
+    background-color: white;
+}
+
+.stuff-changePassword{
+    z-index: 20;
+    position: absolute;
+    top: 90px; right: 30px;
+    border: 2px solid black;
+    width: 300px;
+    padding-bottom:20px;
+    background-color: white;
+}
