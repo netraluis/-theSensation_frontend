@@ -1,33 +1,27 @@
 import "./imageButton.css";
-/*
-[
-  { title, imageUrl, size, history, match, linkUrl },
-]
-*/
+import {Link} from "react-router-dom";
+
 const ImageButton = ({
-  array,
+  array
 }) => (
   <div className="image-button-container">
     {array.map((image) => {
       return (
-        <div
+        <Link
+          to={`/services`}
           className="menu-item"
-          onClick={() => {
-            // console.log('histoy',history,'match',match)
-            // return history.push(`${match.url}${linkUrl}`);
-          }}
         >
           
           <img
             className="imageStyle"
             style={imageStyle}
             src={`${image.imageUrl}`}
-            alt=""
+            alt={`${image.title}`}
           />
           <div className="content">
             <h1 className="title">{image.title.toUpperCase()}</h1>
           </div>
-        </div>
+        </Link>
       );
     })}
   </div>

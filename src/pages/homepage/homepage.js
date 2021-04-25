@@ -46,11 +46,11 @@ const textHideLocalization = {
 const homePage = (props) => {
     const {history, match} = props
     const imageTextFile1 = [
-        { title:'Tratamientos', imageUrl:'static/images/cuadrado.jpg', history, match },
-        { title:'Servicios', imageUrl:'static/images/cuadrado.jpg', history, match },
+        { title:'Tratamientos', imageUrl:'static/images/masaje_wellness.jpg', history, match },
+        { title:'Gastronomía y cultura', imageUrl:'static/images/servicios.jpg', history, match  },
     ]
     const imageTextFile2 = [
-        { title:'Aventura', imageUrl:'static/images/3Q0B6818.JPG', history, match },
+        { title:'Aventura', imageUrl:'static/images/aventura.JPG', history, match },
         { title:'Romántico', imageUrl:'static/images/3Q0B6818.JPG', history, match },
     ]
     return (
@@ -59,7 +59,7 @@ const homePage = (props) => {
             <Slider array={SliderImages} />
             <TextHide title={textHideHotel.title} first={textHideHotel.first} second={textHideHotel.second}/>
             <TextHide title={textHideService.title} first={textHideService.first} second={textHideService.second}/>
-            <ImageButton array={imageTextFile1} />
+            <ImageButton array={imageTextFile1}  />
             <ImageButton array={imageTextFile2} />
             <TextHide title={textHideLocalization.title} first={textHideLocalization.first} second={textHideLocalization.second}/>
             <GoogleMaps/>

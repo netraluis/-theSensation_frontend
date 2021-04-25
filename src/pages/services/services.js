@@ -148,10 +148,10 @@ const servicesPage = () => {
         <>
             <Booking/>
             <TextHide title={textHideLocalization.title} first={textHideLocalization.first} second={textHideLocalization.second}/>
-            <SliderImageLeft array={SliderImagesTrat} title={TitleTrat}/>
-            <SliderImageLeft array={SliderImagesCult} title={TitleCult}/>
-            <SliderImageLeft array={SliderImagesAv} title={TitleAv}/>
-            <SliderImageLeft array={SliderImagesRo} title={TitleRo}/>
+            <SliderImageLeft array={SliderImagesTrat} title={TitleTrat} />
+            <SliderImageLeft array={SliderImagesCult} title={TitleCult} />
+            <SliderImageLeft array={SliderImagesAv} title={TitleAv} />
+            <SliderImageLeft array={SliderImagesRo} title={TitleRo} />
         </>
         )
 }
