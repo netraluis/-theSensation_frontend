@@ -2,17 +2,7 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import "./smallSliderWithText.css";
 import Button from "../../components/button/button";
-import React, { useState, useEffect } from "react";
-// '.'
 
-/*
-[{
-  url,
-  alt,
-  text,
-  button
-}]
-*/
 const SliderImageLeftText = ({
   array,
   title,
@@ -23,7 +13,6 @@ const SliderImageLeftText = ({
   startDate,
   endDate,
 }) => {
-  // const { array, title, text, price, room, history } = props;
   let host = `${window.location.protocol}//${window.location.host}/`;
 
   const onClick = () => {

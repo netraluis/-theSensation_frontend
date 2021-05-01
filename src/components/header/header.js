@@ -22,7 +22,7 @@ const Header = () => {
                     <li className ='header-element'>
                     <Link style={{color:'unset', textDecoration: 'unset'}} to='/location'>Ubicación</Link>
                     </li>
-                    <li className ='header-element'>Contacto</li>
+                    {/*<li className ='header-element'>Contacto</li>*/}
                 </ul>
             </div>
             <div className='header-mobile'>
@@ -33,7 +33,7 @@ const Header = () => {
                     <div className="header-element" ><Link style={{color:'unset', textDecoration: 'unset'}} to='/room'>Habitaciones</Link></div>
                     <div className="header-element" ><Link style={{color:'unset', textDecoration: 'unset'}} to='/services'>Servicios</Link></div>
                     <div className="header-element" ><Link style={{color:'unset', textDecoration: 'unset'}} to='/location'>Ubicación</Link></div>
-                    <div className="header-element" >Contacto</div>
+                    {/*<div className="header-element" >Contacto</div>*/}
                 </Menu>
             </div>
         </div>

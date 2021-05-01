@@ -1,5 +1,6 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
+import {Link} from "react-router-dom";
 
 import useResponsiveFontSize from "../../utils/use-responsive-font-size";
 import './card-form.css'
@@ -32,6 +33,7 @@ const useOptions = () => {
 };
 
 const CardForm = (props) => {
+  const [ booking, setBooking ] = useState(false)
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
@@ -69,7 +71,10 @@ const CardForm = (props) => {
       };
       fetch(`${process.env.REACT_APP_API_URL}/api/v1/bookings/`, requestOptions)
           .then(response => response.json())
-          .then(response=>console.log(response))
+          .then(response=>{
+            props.setDeleteShow(false)
+            setBooking(true)
+          })
     })
 
 
@@ -80,7 +85,10 @@ const CardForm = (props) => {
   return (
     <>
     <div className='card-form-outside'>
-      <form onSubmit={handleSubmit} className='card-form-container'>
+
+      {
+        !booking &&
+        [<form onSubmit={handleSubmit} className='card-form-container'>
         <div className='card-form-personal-data'>
           <input name="name" type="text" placeholder="Nombre" required />
 
@@ -103,9 +111,18 @@ const CardForm = (props) => {
           />
         </div>
         <Button type="submit" disabled={!stripe}>PAGAR</Button>
-      </form>
-      </div>
-      <div><h3>Su reserva se ha realizado correctamente, ya le estamos esperando</h3></div>
+      </form>]
+    }
+
+      { booking &&
+      [<div>
+        <h3>Su reserva se ha realizado correctamente, ya le estamos esperando</h3>
+        <Button><Link style={{color:'unset', textDecoration: 'unset'}} to='/'>
+        Volver
+        </Link></Button>
+      </div>]
+    }
+    </div>
       </>
   );
 };

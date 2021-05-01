@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-
-
 moment.locale("en-GB");
 const localizer = momentLocalizer(moment);
 
@@ -25,7 +23,6 @@ const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         if (data.status === "success") {
           data.data.bookings.map((element) => {
             const {
@@ -35,9 +32,10 @@ const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
               endDate,
               _id,
               pay,
+              email
             } = element;
             bookingFetch.push({
-              title: `${room} con id ${_id}`,
+              title: `${room} con id ${email}`,
               start: startDate,
               end: endDate,
               paymentMethodId,
@@ -74,7 +72,6 @@ const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         triggerRecharge(!recharge);
       });
   };

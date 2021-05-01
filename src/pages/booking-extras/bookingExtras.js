@@ -139,7 +139,6 @@ const BookingExtras = () =>{
         setExtras([...extras,{name, value}])
     }
 
-    console.log(extras)
     return(
     <>
         <SliderImageLeft array={SliderImagesTrat} title={TitleTrat} button hide addExtra={addExtra}/>

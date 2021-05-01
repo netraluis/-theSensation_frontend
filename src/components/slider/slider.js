@@ -2,17 +2,8 @@ import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import './slider.css'
 
-/*
-[{
-  url,
-  alt,
-  text,
-  button
-}]
-*/
 const slider = (props) =>{
   const {array} = props
-  console.log(array.length>0)
   return (
     <AwesomeSlider>
       {array.map(imageObject=>(

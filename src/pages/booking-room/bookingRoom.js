@@ -31,8 +31,8 @@ const sliderImagesRoom11 =
     },
 ]
 
-const room12 = 'Habitación con terraza';
-const text12 = 'Habitacion espaciosa en la planta baja con acceso directo a la piscina';
+const room12 = 'Habitación con vistas al mar';
+const text12 = 'Habitacion espaciosa con un balcón con vistas al mar mediterráneo';
 const price12 = '60 €'
 const sliderImagesRoom12 = 
 [
@@ -51,8 +51,8 @@ const sliderImagesRoom12 =
     },
 ]
 
-const room13 = 'Habitación con terraza';
-const text13 = 'Habitacion espaciosa en la planta baja con acceso directo a la piscina';
+const room13 = 'Habitación con terraza y barbacoa';
+const text13 = 'Habitacion en la planta baja con una barbacoa para compartir con tus amigos';
 const price13 = '60 €'
 const sliderImagesRoom13 = 
 [
@@ -67,8 +67,8 @@ const sliderImagesRoom13 =
     },
 ]
 
-const room14 = 'Habitación con terraza';
-const text14 = 'Habitacion espaciosa en la planta baja con acceso directo a la piscina';
+const room14 = 'Habitación con terraza y bañera';
+const text14 = 'La habitacion más espaciosa del hotel con un balcón con vistas a la montaña';
 const price14 = '60 €'
 const sliderImagesRoom14 = 
 [

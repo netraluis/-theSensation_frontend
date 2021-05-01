@@ -1,7 +1,8 @@
 import Slider from '../../components/slider/slider'
 import TextHide from '../../components/textHide/textHide'
+import Booking from '../../components/booking/booking'
 
-const RoomPage = () => {
+const RoomPage = ({history}) => {
     
     const SliderImages = 
     [
@@ -25,6 +26,7 @@ const RoomPage = () => {
 
     return (
         <>
+            <Booking history={history} />
             <Slider array={SliderImages}/>
             <TextHide title={textHideLocalization.title} first={textHideLocalization.first} second={textHideLocalization.second}/>
         </>

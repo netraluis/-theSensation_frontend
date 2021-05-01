@@ -9,12 +9,6 @@ import { DateRangePicker } from "react-dates";
 import Button from '../button/button'
 
 class Booking extends Component {
-    // BLOCKED_DATES = [
-    //   moment().add(10, "days"),
-    //   moment().add(11, "days"),
-    //   moment().add(12, "days")
-    // ];
-  
     constructor() {
       super();
       this.state = {
@@ -56,22 +50,6 @@ class Booking extends Component {
       this.setState({ focusedInput });
     }
   
-    // handleChangeFullscreen() {
-    //   this.setState({ fullscreen: !this.state.fullscreen });
-    // }
-  
-    // handleChangeDirection(e) {
-    //   this.setState({ direction: e.target.value });
-    // }
-  
-    // handleChangeDateFormat(e) {
-    //   this.setState({ dateFormat: e.target.value });
-    // }
-  
-    // handleIsDayBlocked(day) {
-    //   return this.BLOCKED_DATES.filter(d => d.isSame(day, "day")).length > 0;
-    // }
-  
     onClick = () =>{
       const startDate = this.state.startDate.format('YYYY-MM-DD')
       const endDate = this.state.endDate.format('YYYY-MM-DD')
@@ -96,135 +74,6 @@ class Booking extends Component {
             minimumNights={1}
           />
           <Button onClick={this.onClick}>RESERVAR</Button>
-          {/*<br />
-          <br />
-          <h4>Options</h4>
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                value={true}
-                checked={this.state.fullscreen}
-                onChange={this.handleChangeFullscreen}
-              />{" "}
-              Fullscreen (when picker focused)
-            </label>
-          </div>
-          <br />
-          <div>
-            Anchor Direction:{" "}
-            <label>
-              <input
-                type="radio"
-                name="direction"
-                value="left"
-                checked={this.state.direction === "left"}
-                onChange={this.handleChangeDirection}
-              />{" "}
-              Left
-            </label>{" "}
-            <label>
-              <input
-                type="radio"
-                name="direction"
-                value="right"
-                checked={this.state.direction === "right"}
-                onChange={this.handleChangeDirection}
-              />{" "}
-              Right
-            </label>
-          </div>
-          <br />
-          <div>
-            Calendar Orientation:{" "}
-            <label>
-              <input
-                type="radio"
-                name="orentation"
-                checked={this.state.orientation === "horizontal"}
-                onChange={() => {
-                  this.setState({ orientation: "horizontal" });
-                }}
-              />{" "}
-              Horizontal
-            </label>{" "}
-            <label>
-              <input
-                type="radio"
-                name="orentation"
-                checked={this.state.direction === "vertical"}
-                onChange={() => {
-                  this.setState({ orientation: "vertical" });
-                }}
-              />{" "}
-              Vertical
-            </label>
-          </div>
-          <br />
-          <div>
-            <label>
-              Date Format:{" "}
-              <input
-                type="text"
-                value={this.state.dateFormat}
-                onChange={this.handleChangeDateFormat}
-              />
-            </label>
-          </div>
-          <br />
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                value={true}
-                checked={this.state.small}
-                onChange={() => {
-                  this.setState({ small: !this.state.small });
-                }}
-              />{" "}
-              Small
-            </label>
-          </div>
-          <br />
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                value={true}
-                checked={this.state.block}
-                onChange={() => {
-                  this.setState({ block: !this.state.block });
-                }}
-              />{" "}
-              Block
-            </label>
-          </div>
-          <br />
-          <div>
-            <label>
-              <input
-                type="number"
-                value={this.state.numMonths}
-                onChange={e => {
-                  this.setState({ numMonths: e.target.value });
-                }}
-              />{" "}
-              Number of Months
-            </label>
-          </div>
-          <br />
-          <div>
-            <label>
-              <input
-                type="number"
-                value={this.state.minimumNights}
-                onChange={e => {
-                  this.setState({ minimumNights: e.target.value });
-                }}
-              />{" "}
-              Min Nights
-            </label>
-            </div>*/}
         </div>
       );
     }

@@ -13,7 +13,6 @@ const ChangePassword = (props) => {
     const {passwordCurrent, newPassword} = userCredentials
     const handleSubmit = async (event) => {
       event.preventDefault();
-      console.log(localStorage.getItem('token'))
       const requestOptions = {
         method: "PATCH",
         headers: { "Content-Type": "application/json", "Authorization": `Bearer ${localStorage.getItem('token')} ` },
@@ -28,7 +27,6 @@ const ChangePassword = (props) => {
       )
         .then((response) => response.json())
         .then((data) => {
-          console.log({role:data});
           if(data.status==='fail'){
             props.setIsLogIn(false)
           }

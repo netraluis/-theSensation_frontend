@@ -7,7 +7,7 @@ const stripePromise = loadStripe('pk_test_IjxNzJ5uso6iTd35SxqOveBi00IvZFzdQu');
 const cardFormElement = (props) => {
     return (
         <Elements stripe={stripePromise} >
-            <CardForm extras={props.extras} />
+            <CardForm extras={props.extras} setDeleteShow={props.setDeleteShow} />
         </Elements>
     )
 }
