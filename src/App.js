@@ -11,13 +11,9 @@ import Location from './pages/location/location'
 import Stuff from './pages/stuff/stuff' 
 
 function App() {
-  
   return (
   <>
     <Header/>
-    {/*<Booking/>
-    <Slider array={array}/>
-    <TextHide title = 'titulo' first='primero' second='segundo'/>*/}
     <div className='app-switch-container'>
     <Switch>
       <Route exact path="/" component={Homepage} />
@@ -27,14 +23,10 @@ function App() {
       <Route path="/booking-extras/:startDate/:endDate/:room" component={BookingExtras} />
       <Route path="/location" component={Location} />
       <Route path="/stuff" component={Stuff}/>
-      {/*<Route path="/shop" component={Shoppage} />
-      <Route exact path="/checkout" component={CheckoutPage} />*/}
     </Switch>
     </div>
     <Footer className='app-footer'/>
-    {/*{/*<CardFormElement/>*/}
   </>
-  
   );
 }
 
