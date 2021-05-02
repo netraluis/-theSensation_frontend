@@ -12,14 +12,6 @@ class Booking extends Component {
       this.state = {
         startDate: moment(),
         endDate: moment().add(1, "days"),
-        fullscreen: false,
-        direction: "left",
-        dateFormat: "DD-MM-YYYY",
-        small: false,
-        block: false,
-        orientation: "horizontal",
-        numMonths: 1,
-        minimumNights: 1
       };
 
       this.handleDatesChange = this.handleDatesChange.bind(this);
@@ -64,7 +56,7 @@ class Booking extends Component {
             onDatesChange={this.handleDatesChange} // PropTypes.func.isRequired,
             focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
             onFocusChange={this.handleFocusChange} // PropTypes.func.isRequired,
-            displayFormat={this.state.dateFormat}
+            displayFormat={"DD-MM-YYYY"}
             hideKeyboardShortcutsPanel={true}
             numberOfMonths={1}
             minimumNights={1}

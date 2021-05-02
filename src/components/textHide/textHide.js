@@ -25,5 +25,4 @@ const TextHide=(props) =>{
     </div>
     )}
 
-
 export default TextHide
