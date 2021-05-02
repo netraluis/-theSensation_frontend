@@ -1,18 +1,15 @@
 import { Component } from "react";
 import './booking.css'
 import moment from "moment";
-
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 import { DateRangePicker } from "react-dates";
-
 import Button from '../button/button'
 
 class Booking extends Component {
     constructor() {
       super();
       this.state = {
-        // focusedInput: null,
         startDate: moment(),
         endDate: moment().add(1, "days"),
         fullscreen: false,
@@ -53,7 +50,6 @@ class Booking extends Component {
     onClick = () =>{
       const startDate = this.state.startDate.format('YYYY-MM-DD')
       const endDate = this.state.endDate.format('YYYY-MM-DD')
-      console.log('hola',startDate, endDate, this.props.history)
       this.props.history.push(`/booking-room/${startDate}/${endDate}`)
       
     }

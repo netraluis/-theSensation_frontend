@@ -61,7 +61,10 @@ const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
   const onSelectEvent = ({ paymentMethodId }) => {
     const requestOptions = {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")} `,
+      },
       body: JSON.stringify({
         paymentMethodId,
       }),

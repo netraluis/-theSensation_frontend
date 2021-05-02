@@ -43,16 +43,15 @@ const textHideLocalization = {
             ]
 }
 
-const homePage = (props) => {
-    const {history, match} = props
-    const imageTextFile1 = [
-        { title:'Tratamientos', imageUrl:'static/images/masaje_wellness.jpg', history, match },
-        { title:'Gastronomía y cultura', imageUrl:'static/images/servicios.jpg', history, match  },
-    ]
-    const imageTextFile2 = [
-        { title:'Aventura', imageUrl:'static/images/aventura.JPG', history, match },
-        { title:'Romántico', imageUrl:'static/images/3Q0B6818.JPG', history, match },
-    ]
+const homePage = ({history, match}) => {
+        const imageTextFile1 = [
+            { title:'Tratamientos', imageUrl:'static/images/masaje_wellness.jpg', history, match },
+            { title:'Gastronomía y cultura', imageUrl:'static/images/servicios.jpg', history, match  },
+        ]
+        const imageTextFile2 = [
+            { title:'Aventura', imageUrl:'static/images/aventura.JPG', history, match },
+            { title:'Romántico', imageUrl:'static/images/romantic.JPG', history, match },
+        ]
     return (
         <>
             <Booking history={history} />
