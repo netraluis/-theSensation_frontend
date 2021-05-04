@@ -135,7 +135,6 @@ const BookingExtras = () =>{
     const [extras, setExtras] = useState([])
 
     const addExtra = (name, value) => {
-        console.log({name, value})
         setExtras([...extras,{name, value}])
     }
 

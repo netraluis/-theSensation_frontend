@@ -14,8 +14,6 @@ const Resume = (props) => {
 
 
   const deleteItem = (index) => {
-    console.log('deleteItem', index)
-    console.log(props.extras)
     const newArray = [...props.extras]
     newArray.splice(index,1)
     props.setExtras(newArray)

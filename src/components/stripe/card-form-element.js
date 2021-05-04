@@ -2,7 +2,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from '@stripe/stripe-js';
 import CardForm from './card-form';
 
-const stripePromise = loadStripe('pk_test_IjxNzJ5uso6iTd35SxqOveBi00IvZFzdQu');
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const cardFormElement = (props) => {
     return (
