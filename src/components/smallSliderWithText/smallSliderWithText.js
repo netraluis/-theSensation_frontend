@@ -3,22 +3,13 @@ import "react-awesome-slider/dist/styles.css";
 import "./smallSliderWithText.css";
 import Button from "../../components/button/button";
 
-const SliderImageLeftText = ({
-  array,
-  title,
-  text,
-  price,
-  room,
-  history,
-  startDate,
-  endDate,
-}) => {
+const SliderImageLeftText = ({ array, title, text, price, room, history, startDate, endDate }) => {
   let host = `${window.location.protocol}//${window.location.host}/`;
 
   const onClick = () => {
     history.push(`/booking-extras/${startDate}/${endDate}/${room}`);
   };
-
+  
   return (
     <div className="sliderLeftText-outside">
       <div className="sliderLeftText">
