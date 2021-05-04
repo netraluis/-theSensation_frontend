@@ -139,7 +139,7 @@ const SliderImagesRo =
     }
 ]
 
-const servicesPage = () => (
+const ServicesPage = () => (
     <>
         <Booking/>
         <TextHide title={textHideLocalization.title} first={textHideLocalization.first} second={textHideLocalization.second}/>
@@ -151,4 +151,4 @@ const servicesPage = () => (
 )
 
 
-export default servicesPage
+export default ServicesPage

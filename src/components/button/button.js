@@ -1,10 +1,10 @@
+  
 import React from 'react';
-
 import './button.css';
 
-
-const Button  =({children}) =>(
-    <button className = 'custom-button'>
+const Button  =
+({children, ...otherProps}) =>(
+    <button className = ' custom-button' {...otherProps}>
         {children}
     </button>
 )

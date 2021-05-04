@@ -1,0 +1,11 @@
+.bookingRoom-text{
+    border: 2px solid red;
+    border: 2px solid var(--primary);
+    /* width: 500px; */
+    padding: 2vh;
+    border-radius: 3px;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    
+}

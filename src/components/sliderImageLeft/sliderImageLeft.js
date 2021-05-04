@@ -4,9 +4,8 @@ import "./sliderImageLeft.css";
 import Button from "../../components/button/button";
 import React, { useState } from "react";
 
-const SliderImageLeft = (props) => {
+const SliderImageLeft = ({ array, title, button, hide, addExtra }) => {
   let host = `${window.location.protocol}//${window.location.host}/`;
-  const { array, title, button, hide, addExtra } = props;
   const [show, setShow] = useState(false);
   const click = (name, price) => {
     addExtra(name, price)
