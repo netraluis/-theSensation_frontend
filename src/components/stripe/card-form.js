@@ -41,11 +41,7 @@ const CardForm = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    alert("no hay stripe");
-
     if (!stripe || !elements) {
-      // Stripe.js has not loaded yet. Make sure to disable
-      // form submission until Stripe.js has loaded.
       return;
     }
 
@@ -76,10 +72,6 @@ const CardForm = (props) => {
             setBooking(true)
           })
     })
-
-
-    // console.log("[PaymentMethod]", payload);
-    console.log('extras', props.extras)
   };
 
   return (
