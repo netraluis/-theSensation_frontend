@@ -27,7 +27,6 @@ const SignIn = (props) => {
       )
         .then((response) => response.json())
         .then((data) => {
-            console.log(data)
             if(data.status==='success'){
                 if(data.data.user.role==='admin') {
                     props.setIsAdmin(true)

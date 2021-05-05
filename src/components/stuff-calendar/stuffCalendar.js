@@ -25,24 +25,8 @@ const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
       .then((data) => {
         if (data.status === "success") {
           data.data.bookings.map((element) => {
-            const {
-              paymentMethodId,
-              room,
-              startDate,
-              endDate,
-              _id,
-              pay,
-              email
-            } = element;
-            bookingFetch.push({
-              title: `${room} con id ${email}`,
-              start: startDate,
-              end: endDate,
-              paymentMethodId,
-              _id,
-              pay,
-              room,
-            });
+            const { paymentMethodId, room, startDate, endDate, _id, pay, email} = element;
+            bookingFetch.push({ title: `${room} con id ${email}`, start: startDate, end: endDate, paymentMethodId, _id, pay, room });
         });
         setBookingArray(bookingFetch);
         setIsLogIn(true)
@@ -55,9 +39,6 @@ const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
       });
   }, [recharge]);
 
-  const onView = () => {
-    console.log("viewEv");
-  };
   const onSelectEvent = ({ paymentMethodId }) => {
     const requestOptions = {
       method: "POST",
@@ -103,7 +84,6 @@ const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
           views={["month"]}
           date={calendarDate}
           onNavigate={onNavigate}
-          onView={onView}
           onSelectEvent={(event) => onSelectEvent(event)}
           eventPropGetter={(event, start, end, isSelected) => {
             let newStyle = {
