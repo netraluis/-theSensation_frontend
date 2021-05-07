@@ -49,8 +49,8 @@ const homePage = ({history, match}) => {
             { title:'Gastronomía y cultura', imageUrl:'static/images/servicios.jpg', history, match  },
         ]
         const imageTextFile2 = [
-            { title:'Aventura', imageUrl:'static/images/aventura.JPG', history, match },
-            { title:'Romántico', imageUrl:'static/images/romantic.JPG', history, match },
+            { title:'Aventura', imageUrl:'static/images/aventura.jpg', history, match },
+            { title:'Romántico', imageUrl:'static/images/romantic.jpg', history, match },
         ]
     return (
         <>
