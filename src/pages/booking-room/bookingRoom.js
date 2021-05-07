@@ -110,14 +110,14 @@ const BookingRoom = (props) => {
 
     },[])
 
-    const [room11Show, setRoom11Show]  = useState(false)
-    const [room12Show, setRoom12Show]  = useState(false)
-    const [room13Show, setRoom13Show]  = useState(false)
-    const [room14Show, setRoom14Show]  = useState(false)
+    const [room11Show, setRoom11Show]  = useState(null)
+    const [room12Show, setRoom12Show]  = useState(null)
+    const [room13Show, setRoom13Show]  = useState(null)
+    const [room14Show, setRoom14Show]  = useState(null)
 
     return (
         <>  
-            {!room11Show&&!room12Show&&!room13Show&&!room14Show&&<div>
+            {room11Show===false&&room12Show===false&&room13Show===false&&room14Show===false&&<div>
                 <Booking history={history} />
                 <div className='bookingRoom-text'> Lo sentimos no tenemos disponibilidad para estas fechas, elija otra fecha </div>
             </div>}
