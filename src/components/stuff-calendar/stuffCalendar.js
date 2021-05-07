@@ -26,7 +26,7 @@ const Stuff = ({setIsLogIn,recharge, triggerRecharge, setIsAdmin}) => {
         if (data.status === "success") {
           data.data.bookings.map((element) => {
             const { paymentMethodId, room, startDate, endDate, _id, pay, email} = element;
-            bookingFetch.push({ title: `${room} con id ${email}`, start: startDate, end: endDate, paymentMethodId, _id, pay, room });
+            bookingFetch.push({ title: `${room} con email ${email}`, start: startDate, end: endDate, paymentMethodId, _id, pay, room });
         });
         setBookingArray(bookingFetch);
         setIsLogIn(true)
