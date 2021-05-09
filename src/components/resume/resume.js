@@ -11,6 +11,7 @@ const Resume = (props) => {
   let end = moment(endDate)
   let start = moment(startDate)
   const days = end.diff(start, 'days')
+  let key = 1
 
 
   const deleteItem = (index) => {
@@ -37,7 +38,7 @@ const Resume = (props) => {
               <div style={{display: props.extras !== 0 ? '':'none'}}>
                 <ul>
                   {props.extras.map((el,index)=>{
-                    return <li className = 'resume-list'> Un {el.name} a {el.value} <span style={{display: deleteShow ? '':'none'}} onClick={()=>deleteItem(index)}>&#9746;</span></li>
+                    return <li key= {key++} className = 'resume-list'> Un {el.name} a {el.value} <span style={{display: deleteShow ? '':'none'}} onClick={()=>deleteItem(index)}>&#9746;</span></li>
                   })}
                 </ul>
               </div>

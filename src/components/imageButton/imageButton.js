@@ -3,9 +3,9 @@ import {Link} from "react-router-dom";
 
 const ImageButton = ({array}) => (
   <div className="image-button-container">
-    {array.map((image) => {
+    {array.map((image, index) => {
       return (
-        <Link to={`/services`} className="menu-item">
+        <Link key={index} to={`/services`} className="menu-item">
           <img className="imageStyle" style={imageStyle} src={`${image.imageUrl}`} alt={`${image.title}`}/>
           <div className="content">
             <h1 className="title">{image.title.toUpperCase()}</h1>
