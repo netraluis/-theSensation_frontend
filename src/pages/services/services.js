@@ -139,9 +139,9 @@ const SliderImagesRo =
     }
 ]
 
-const ServicesPage = () => (
+const ServicesPage = ({history}) => (
     <>
-        <Booking/>
+        <Booking history={history}/>
         <TextHide title={textHideLocalization.title} first={textHideLocalization.first} second={textHideLocalization.second}/>
         <SliderImageLeft array={SliderImagesTrat} title={TitleTrat} />
         <SliderImageLeft array={SliderImagesCult} title={TitleCult} />
